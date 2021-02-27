@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="ibatis">
+    <output-path>$PROJECT_DIR$/out/artifacts/ibatis</output-path>
+    <root id="root">
+      <element id="artifact" artifact-name="iBATIS_JPetStore-4.0.5:Web exploded" />
+      <element id="dir-copy" path="$PROJECT_DIR$/web/WEB-INF" />
+    </root>
+  </artifact>
+</component>
