@@ -31,6 +31,8 @@
     <dao interface="com.ibatis.jpetstore.persistence.iface.OrderDao"
       implementation="com.ibatis.jpetstore.persistence.sqlmapdao.OrderSqlMapDao"/>
 
+    <dao interface="com.ibatis.jpetstore.persistence.iface.IbatisDemoDao"
+         implementation="com.ibatis.jpetstore.persistence.sqlmapdao.IbatisDemoSqlMapDao"/>
   </context>
 
 </daoConfig>

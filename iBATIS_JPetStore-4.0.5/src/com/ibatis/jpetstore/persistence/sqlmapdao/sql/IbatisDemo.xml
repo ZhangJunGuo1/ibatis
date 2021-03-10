@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN" "http://www.ibatis.com/dtd/sql-map-2.dtd">
+
+<!-- The SQL in these maps files has purposely been typed with more verbosity than is actually required.
+ For example, many of the selects could have just used SELECT * FROM... instead of listing all of the columns.
+ This is to demonstrate that even complex SQL can be handled and coded and formatted the way SQL was meant
+ to be (i.e. not a bunch of concatenated strings in a Java class). -->
+
+<sqlMap namespace="IbatisDemo">
+
+  <typeAlias alias="ibatisDemo" type="com.ibatis.jpetstore.domain.IbatisDemo"/>
+
+  <resultMap id="ibatisDemoResult" class="ibatisDemo">
+    <result property="id" column="选课编号"/>
+    <result property="studentId" column="学号"/>
+    <result property="kcId" column="课程编号"/>
+    <result property="scope" column="分数"/>
+  </resultMap>
+  <select id="selectBatch" parameterClass="ibatisDemo" resultMap="ibatisDemoResult">
+    select * from student_kc where
+    学号 =
+      #studentId#
+  </select>
+  <update id="updateBatch" parameterClass="ibatisDemo">
+      update wages set
+      id=#kcId#,
+      wages=#scope#
+      where name=#studentId#
+  </update>
+  <!--测试批量更新-->
+  <update id="updateBatchDemo" parameterClass="java.util.Map">
+    update wages set
+    id=#id#
+    where wages in
+    <iterate property="list" open="(" close=")" conjunction=",">
+      <![CDATA[
+      #list[].studentId#
+      ]]>
+    </iterate>
+  </update>
+  <insert id="addBatchWages" parameterClass="java.util.List">
+    insert into wages(name,wages)
+    values
+    <iterate conjunction=",">
+      ( #[].kcId#,
+      #[].scope#
+      )
+    </iterate>
+  </insert>
+</sqlMap>

@@ -3,7 +3,6 @@ package com.ibatis.jpetstore.persistence;
 import com.ibatis.common.resources.Resources;
 import com.ibatis.dao.client.DaoManager;
 import com.ibatis.dao.client.DaoManagerBuilder;
-
 import java.io.Reader;
 
 /**

@@ -6,7 +6,7 @@ import com.ibatis.jpetstore.service.AccountService;
 import com.ibatis.jpetstore.service.CatalogService;
 import com.ibatis.struts.ActionContext;
 import com.ibatis.struts.BaseBean;
-import com.ibatis.struts.BeanActionException;
+//import com.ibatis.struts.BeanActionException;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -135,7 +135,8 @@ public class AccountBean extends BaseBean {
       repeatedPassword = null;
       return "success";
     } catch (Exception e) {
-      throw new BeanActionException ("There was a problem creating your Account Information.  Cause: " + e, e);
+      return "";
+      //throw new BeanActionException ("There was a problem creating your Account Information.  Cause: " + e, e);
     }
   }
 
@@ -144,7 +145,8 @@ public class AccountBean extends BaseBean {
       account = accountService.getAccount(account.getUsername());
       return "success";
     } catch (Exception e) {
-      throw new BeanActionException ("There was a problem retrieving your Account Information. Cause: "+e, e);
+      return "";
+      //throw new BeanActionException ("There was a problem retrieving your Account Information. Cause: "+e, e);
     }
   }
 
@@ -155,7 +157,8 @@ public class AccountBean extends BaseBean {
       myList = catalogService.getProductListByCategory(account.getFavouriteCategoryId());
       return "success";
     } catch (Exception e) {
-      throw new BeanActionException ("There was a problem updating your Account Information. Cause: "+e, e);
+      return "";
+      //throw new BeanActionException ("There was a problem updating your Account Information. Cause: "+e, e);
     }
   }
 

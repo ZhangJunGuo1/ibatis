@@ -6,7 +6,7 @@
   <properties resource="properties/database.properties"/>
 
   <settings
-    cacheModelsEnabled="true"
+    cacheModelsEnabled="false"
     enhancementEnabled="true"
     maxSessions="64"
     maxTransactions="8"
@@ -31,5 +31,5 @@
   <sqlMap resource="com/ibatis/jpetstore/persistence/sqlmapdao/sql/LineItem.xml"/>
   <sqlMap resource="com/ibatis/jpetstore/persistence/sqlmapdao/sql/Order.xml"/>
   <sqlMap resource="com/ibatis/jpetstore/persistence/sqlmapdao/sql/Item.xml"/>
-
+  <sqlMap resource="com/ibatis/jpetstore/persistence/sqlmapdao/sql/IbatisDemo.xml"/>
 </sqlMapConfig>

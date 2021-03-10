@@ -7,8 +7,22 @@
           <element id="module-output" name="iBATIS_JPetStore-4.0.5" />
         </element>
         <element id="directory" name="lib">
-          <element id="library" level="project" name="lib" />
-          <element id="library" level="project" name="devlib" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/commons-beanutils.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/commons-collections.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/commons-digester.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/commons-fileupload.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/commons-lang.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/commons-logging.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/commons-validator.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/ibatis-dao-2.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/jakarta-oro.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/mysql-connector-java-8.0.22.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/struts.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/devlib/ant.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/devlib/log4j-1.2.8.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/devlib/optional.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/devlib/servlet.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/ibatis-sqlmap-2.3.0.jar" />
         </element>
       </element>
       <element id="javaee-facet-resources" facet="iBATIS_JPetStore-4.0.5/web/Web" />

@@ -122,7 +122,8 @@ public class BeanAction extends Action {
             method = form.getClass().getMethod(methodName, null);
             forward = (String) method.invoke(form, null);
           } catch (Exception e) {
-            throw new BeanActionException("Error dispatching bean action via method parameter ('" + methodName + "').  Cause: " + e, e);
+            return null;
+            //throw new BeanActionException("Error dispatching bean action via method parameter ('" + methodName + "').  Cause: " + e, e);
           }
         }
 
@@ -137,7 +138,8 @@ public class BeanAction extends Action {
                 method = form.getClass().getMethod(methodName, null);
                 forward = (String) method.invoke(form, null);
               } catch (Exception e) {
-                throw new BeanActionException("Error dispatching bean action via URL pattern ('" + methodName + "').  Cause: " + e, e);
+                return null;
+                //throw new BeanActionException("Error dispatching bean action via URL pattern ('" + methodName + "').  Cause: " + e, e);
               }
             }
           }
