@@ -31,7 +31,7 @@ public class SequenceSqlMapDao extends BaseSqlMapDao implements SequenceDao {
 
     sequence = (Sequence) queryForObject("getSequence", sequence);
     if (sequence == null) {
-      //throw new DaoException("Error: A null sequence was returned from the database (could not get next " + name + " sequence).");
+      throw new DaoException("Error: A null sequence was returned from the database (could not get next " + name + " sequence).");
     }
     Object parameterObject = new Sequence(name, sequence.getNextId() + 1);
     update("updateSequence", parameterObject);
