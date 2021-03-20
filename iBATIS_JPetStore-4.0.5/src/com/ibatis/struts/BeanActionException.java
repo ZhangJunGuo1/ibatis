@@ -1,6 +1,6 @@
 package com.ibatis.struts;
 
-//import com.ibatis.common.exception.NestedRuntimeException;
+import com.ibatis.common.exception.NestedRuntimeException;
 
 /**
  * This exception is thrown internally by BeanAction and
@@ -11,22 +11,22 @@ package com.ibatis.struts;
  * 
  * @author Clinton Begin
  */
-//public class BeanActionException extends NestedRuntimeException {
-//
-//  public BeanActionException() {
-//    super();
-//  }
-//
-//  public BeanActionException(String s) {
-//    super(s);
-//  }
-//
-//  public BeanActionException(Throwable throwable) {
-//    super(throwable);
-//  }
-//
-//  public BeanActionException(String s, Throwable throwable) {
-//    super(s, throwable);
-//  }
-//
-//}
+public class BeanActionException extends NestedRuntimeException {
+
+  public BeanActionException() {
+    super();
+  }
+
+  public BeanActionException(String s) {
+    super(s);
+  }
+
+  public BeanActionException(Throwable throwable) {
+    super(throwable);
+  }
+
+  public BeanActionException(String s, Throwable throwable) {
+    super(s, throwable);
+  }
+
+}
