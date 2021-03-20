@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<job-scheduling-data xmlns="http://www.quartz-scheduler.org/xml/JobSchedulingData"
+					 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+					 xsi:schemaLocation="http://www.quartz-scheduler.org/xml/JobSchedulingData http://www.quartz-scheduler.org/xml/job_scheduling_data_2_0.xsd"
+					 version="2.0">
+	<schedule>
+		<job>
+			<name>JPetQuartz</name>
+			<group>jobs</group>
+			<description>配置job任务</description>
+			<job-class>com.ibatis.jpetstore.quartz.JPetQuartz</job-class>
+			<job-data-map>
+				<entry>
+					<key>maxRetryCount</key>
+					<value>3</value>
+				</entry>
+				<entry>
+					<key>retryInterval</key>
+					<value>30000</value>
+				</entry>
+			</job-data-map>
+		</job>
+		<trigger>
+			<cron>
+				<name>trigger1</name>
+				<group>triggers</group>
+				<job-name>JPetQuartz</job-name>
+				<job-group>jobs</job-group>
+				<cron-expression>0 0/5 * * * ?</cron-expression>
+			</cron>
+		</trigger>
+	</schedule>
+</job-scheduling-data>
